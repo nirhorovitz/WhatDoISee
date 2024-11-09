@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fragment="com.example.whatdoisee.SettingsFragment"
+    >
+
+    <PreferenceCategory
+        android:title="distances">
+    <SeekBarPreference
+        android:key="maximum"
+        android:title="@string/maximum_distance_settings_text"
+        app:min="1"
+        android:max="90"
+        android:defaultValue="40"
+        app:showSeekBarValue="true" />
+
+    <SeekBarPreference
+        android:key="minimum"
+        android:title="@string/minimum_distance_settings_text"
+        app:min="0"
+        android:max="90"
+        android:defaultValue="1"
+        app:showSeekBarValue="true" />
+
+    <SeekBarPreference
+        android:key="resolution"
+        android:title="@string/distance_resolution_settings_text"
+        app:min="10"
+        android:max="150"
+        android:defaultValue="50"
+        app:showSeekBarValue="true"/>
+
+    </PreferenceCategory>
+
+    <SeekBarPreference
+        android:key="batchSize"
+        android:title="batch size"
+        app:min="1"
+        android:max="100"
+        android:defaultValue="10"
+        app:showSeekBarValue="true" />
+
+    <Preference
+        android:key="reset"
+        android:title="@string/reset"/>
+
+    <Preference
+        android:key="tutorial"
+        android:title="tutorial"/>
+
+</PreferenceScreen>

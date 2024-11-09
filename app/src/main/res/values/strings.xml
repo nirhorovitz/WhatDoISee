@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">What Do I See</string>
+    <string name="x_axe">X axe</string>
+    <string name="y_axe">Y axe</string>
+    <string name="z_axe">Z axe</string>
+    <string name="toMapButton">go to map</string>
+    <string name="toCameraButton">go to camera</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="title_tutorial_activity">TutorialActivity</string>
+    <string name="searching_toast">searching location</string>
+    <string name="location_permission_denied">can\'t work without location</string>
+    <string name="camera_permission_denied">can\'t work without camera</string>
+    <string name="allow_camera_please">please provide camera permissions</string>
+    <string name="allow_location_please">please provide location permissions</string>
+    <string name="allow_both">please provide camera and location permissions</string>
+    <string name="circle_explain">put something inside the circle \nin the middle, you can use zoom</string>
+    <string name="button_explain">press this button</string>
+    <string name="move_to_map_explain">the location will be marked on the map</string>
+    <string name="back_to_camera_explain">go back to the camera using the regular back button</string>
+    <string name="next_button">next</string>
+    <string name="failure">failure, close app and try again</string>
+    <string name="no_location">no location</string>
+    <string name="maximum_distance_settings_text">maximum distance to target (km)</string>
+    <string name="minimum_distance_settings_text">minimum distance to target (km)</string>
+    <string name="distance_resolution_settings_text">distance resolution (m)</string>
+    <string name="settings">settings</string>
+    <string name="title_settings_activity">SettingsActivity</string>
+    <string name="reset">reset all</string>
+</resources>

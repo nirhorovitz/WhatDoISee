@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "102059773543",
+    "project_id": "what-do-i-see-df2b3",
+    "storage_bucket": "what-do-i-see-df2b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102059773543:android:ed9846fd328faa9fef8ec2",
+        "android_client_info": {
+          "package_name": "com.example.whatdoisee"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgmUejqyr5qDUrk9GOL_KXMOfPKHdr630"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="settings_height_of_all">60dp</dimen>
+    <dimen name="margin_of_all">10dp</dimen>
+</resources>

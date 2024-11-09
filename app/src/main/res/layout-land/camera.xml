@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.camera.view.PreviewView
+            android:id="@+id/CameraPreviewView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/circle_center"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/circle_shape"
+                android:outlineSpotShadowColor="#009900"
+                android:outlineAmbientShadowColor="#990000"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/azimuth"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textAlignment="center"/>
+
+
+        </androidx.camera.view.PreviewView>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/toMapButton"
+            android:onClick="buttonPressed"
+            android:forceHasOverlappingRendering="true"
+            android:layout_margin="@dimen/margin_of_all"
+            android:clickable="true"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_of_all"
+            android:layout_marginTop="@dimen/margin_of_all"
+            android:layout_marginEnd="@dimen/margin_of_all"
+            android:layout_marginBottom="@dimen/margin_of_all"
+            android:clickable="true"
+            android:forceHasOverlappingRendering="true"
+            android:onClick="goToSettings"
+            android:text="@string/settings"
+            android:textAlignment="center"
+            android:layout_alignTop="@id/CameraPreviewView"
+            android:layout_alignEnd="@id/CameraPreviewView"/>
+
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/floatingActionButton2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:clickable="true"-->
+<!--            android:contentDescription="@string/toMapButton"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:onClick="buttonPressed"-->
+<!--            android:background="@color/white"-->
+<!--            android:src="@mipmap/ic_launcher_round"-->
+<!--            android:forceHasOverlappingRendering="true"/>-->
+
+
+    </RelativeLayout >
+
+</androidx.constraintlayout.widget.ConstraintLayout>
