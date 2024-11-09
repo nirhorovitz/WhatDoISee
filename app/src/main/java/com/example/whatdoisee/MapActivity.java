@@ -419,7 +419,9 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         runOnUiThread(()-> {
             searchingToast.cancel();
             Toast.makeText(this, "couldn't find", Toast.LENGTH_LONG).show();
-            polylineOptions.color(R.color.);
+            polylineOptions.color(R.color.darkRed);
+            mMap.clear();
+            mMap.addPolyline(polylineOptions);
 //            targetFinderThread.stop();
         });
     }
