@@ -10,7 +10,6 @@ import java.net.URL;
 
 public class TargetFinder implements Runnable {
     private final LatLng myLocation;
-    private double myHeight;
     private final LatLng myLocationRadians;
     private final double direction;
     private static final double EARTH_RADIUS = 6371000;
@@ -45,7 +44,7 @@ public class TargetFinder implements Runnable {
 
     @Override
     public void run() {
-        myHeight = getHeights(new Target[] {new Target(myLocation, 0)} )[0];
+        double myHeight = getHeights(new Target[]{new Target(myLocation, 0)})[0];
         int distance = MINIMAL_LENGTH_TO_TARGET;
         while (!searchFinished) {
             Target[] currentCheck = currentCheckMaker(distance);
@@ -84,7 +83,7 @@ public class TargetFinder implements Runnable {
         try {
             String baseUrl = "https://maps.googleapis.com/maps/api/elevation/json?locations=";
             String beforeKey = "&key=";
-            String API_KEY = "AIzaSyABuolL9hkLJ_uP1rYzxwmElWwi822A-C0";
+            String API_KEY = "API_KEY"; //TODO enter API_KEY
             URL url = new URL(baseUrl + targetsToLocationsString(targets) + beforeKey + API_KEY);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
