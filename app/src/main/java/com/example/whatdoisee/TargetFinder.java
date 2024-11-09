@@ -9,29 +9,19 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class TargetFinder implements Runnable {
-    private LatLng myLocation;
+    private final LatLng myLocation;
     private double myHeight;
-    private LatLng myLocationRadians;
-    private double direction;
+    private final LatLng myLocationRadians;
+    private final double direction;
     private static final double EARTH_RADIUS = 6371000;
     private static int MINIMAL_LENGTH_TO_TARGET; // = 100;
     private static int MAXIMAL_LENGTH_TO_TARGET; // = 40000;
     private static int DISTANCE_RESOLUTION; // = 100;
-    private int BATCH_SIZE = SettingsActivity.BATCH_SIZE;
-    private double cameraAngleFromTheGround;
+    private final int BATCH_SIZE;
+    private final double cameraAngleFromTheGround;
     private boolean searchFinished = false;
-    private TargetFinderCallback callback;
+    private final TargetFinderCallback callback;
 
-    public TargetFinder(LatLng location, double direction, double cameraAngleFromTheGround, int maximum, int minimum, int resolution, TargetFinderCallback callback){
-        this.myLocation = location;
-        this.direction = direction;
-        this.callback = callback;
-        this.cameraAngleFromTheGround = cameraAngleFromTheGround;
-        MINIMAL_LENGTH_TO_TARGET = minimum;
-        MAXIMAL_LENGTH_TO_TARGET = maximum;
-        DISTANCE_RESOLUTION = resolution;
-        myLocationRadians = new LatLng(Math.toRadians(location.latitude), Math.toRadians(location.longitude));
-    }
     public TargetFinder(LatLng location, double direction, double cameraAngleFromTheGround, int maximum, int minimum, int resolution, TargetFinderCallback callback, int batchSize){
         this.myLocation = location;
         this.direction = direction;
